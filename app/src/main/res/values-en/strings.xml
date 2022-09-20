@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Bubble Browser</string>
+    <string name="toast_granted">Granted.</string>
+    <string name="toast_turn_on_notification">Turn on my notification.</string>
+    <string name="toast_allow_bubble">Select \"All conversation can bubble.\"</string>
+    <string name="menu_open_bookmark">Open Bookmarks</string>
+    <string name="menu_close">Close</string>
+    <string name="notification_channel_bubble">Notifications for Bubbles.</string>
+    <string name="toast_from_share_intent_invalid_url">Invalid URL. Received URL :</string>
+    <string name="menu_back">Back</string>
+    <string name="menu_forward">Forward</string>
+    <string name="menu_open_with_browser">Open with browser</string>
+    <string name="menu_add_bookmarks">Add to Bookmarks</string>
+    <string name="menu_reload">Reload</string>
+    <string name="text_go_with_url">Enter URL</string>
+    <string name="text_go_with_bookmarks">Select Bookmarks</string>
+    <string name="button_go_url">Go</string>
+    <string name="text_bookmarks">Bookmarks</string>
+    <string name="init_allow_notification">Grant Notifications</string>
+    <string name="init_show_bubble">Turn on Bubbles</string>
+    <string name="init_start">Start</string>
+    <string name="button_manage">Manage</string>
+    <string name="button_grant">Grant</string>
+    <string name="init_detail">Bubble Browser uses the Bubble Notification in the Android notification system. Please allow the following permissions to use this app.</string>
+    <string name="init_head">Introduction</string>
+    <string name="geolocation_permission_denied">Denied Geolocation Access.</string>
+    <string name="ask_geolocation">The website %1$s wants to your device\'s location.</string>
+    <string name="button_allow">Allow</string>
+    <string name="button_block">Block</string>
+    <string name="geolocation_title">Geolocation Access Request</string>
+    <string name="add_bookmark_title_hint">Bookmark title</string>
+    <string name="add_bookmark_popup_save">Save</string>
+    <string name="add_bookmark_toast_saved">The bookmark saved.</string>
+    <string name="toast_empty_url">The url cannot be empty.</string>
+    <string name="dialog_edit_url">Bookmark URL</string>
+    <string name="dialog_edit_name">Bookmark Title</string>
+    <string name="dialog_edit_title">Edit Bookmark</string>
+    <string name="dialog_edit_save">Save</string>
+    <string name="dialog_edit_cancel">Cancel</string>
+    <string name="dialog_edit_delete_bookmark">Delete</string>
+    <string name="toast_edit_save">The Bookmark Saved.</string>
+    <string name="toast_edit_delete">The Bookmark deleted.</string>
+    <string name="dialog_confirm_delete_message">Are you sure you want to delete \"%1$s\" ?</string>
+
+</resources>

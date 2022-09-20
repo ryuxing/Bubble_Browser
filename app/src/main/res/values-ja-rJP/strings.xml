@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Bubble Browser</string>
+    <string name="init_detail">Bubble BrowserではBubble通知というAndroidの通知システムを利用しています。そのため、アプリの利用には以下の権限が必要です。</string>
+    <string name="init_head">はじめに</string>
+    <string name="button_grant">許可する</string>
+    <string name="button_manage">設定する</string>
+    <string name="init_start">利用開始</string>
+    <string name="init_show_bubble">バブル通知を有効化</string>
+    <string name="init_allow_notification">通知を許可</string>
+    <string name="text_bookmarks">ブックマーク一覧</string>
+    <string name="button_go_url">開く</string>
+    <string name="text_go_with_bookmarks">ブックマークから選択する</string>
+    <string name="text_go_with_url">URLを入力</string>
+    <string name="menu_reload">再読み込み</string>
+    <string name="menu_add_bookmarks">ブックマークに追加</string>
+    <string name="menu_open_with_browser">ブラウザで開く</string>
+    <string name="menu_forward">進む</string>
+    <string name="menu_back">戻る</string>
+    <string name="toast_from_share_intent_invalid_url">不正なURL. 受信したURL:</string>
+    <string name="notification_channel_bubble">Bubble用の通知です。</string>
+    <string name="menu_close">閉じる</string>
+    <string name="menu_open_bookmark">ブックマークを開く</string>
+    <string name="toast_allow_bubble">\"すべての会話をバブルで表示する\" を選択してください。</string>
+    <string name="toast_turn_on_notification">通知をオンにしてください。</string>
+    <string name="toast_granted">許可されました。</string>
+    <string name="geolocation_permission_denied">位置情報の権限がありません。</string>
+    <string name="ask_geolocation">ウェブサイト %1$s が、デバイスの現在地情報へのアクセスを要求しています。</string>
+    <string name="button_allow">許可</string>
+    <string name="button_block">ブロック</string>
+    <string name="geolocation_title">位置情報アクセスのリクエスト</string>
+    <string name="add_bookmark_title_hint">ブックマークの名前</string>
+    <string name="add_bookmark_popup_save">保存</string>
+    <string name="add_bookmark_toast_saved">ブックマークに保存しました。</string>
+    <string name="toast_empty_url">URLが入力されていません。</string>
+    <string name="dialog_edit_url">ブックマークのURL</string>
+    <string name="dialog_edit_name">ブックマークのタイトル</string>
+    <string name="dialog_edit_title">ブックマーク編集</string>
+    <string name="dialog_edit_save">保存</string>
+    <string name="dialog_edit_cancel">キャンセル</string>
+    <string name="dialog_edit_delete_bookmark">削除</string>
+    <string name="toast_edit_save">ブックマークを保存しました。</string>
+    <string name="toast_edit_delete">ブックマークを削除しました。</string>
+    <string name="dialog_confirm_delete_message">本当に\"%1$s\"を削除しますか？</string>
+</resources>
