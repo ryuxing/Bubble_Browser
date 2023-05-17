@@ -14,9 +14,11 @@ interface BookmarkDao {
 
     @Delete
     suspend fun delete(bookmark: Bookmark)
+    @Query("Delete FROM Bookmark")
+    suspend fun deleteAll()
 
     @Query("SELECT * FROM Bookmark")
-     fun getAll():List<Bookmark>
+    fun getAll():List<Bookmark>
 
     @Query("SELECT * FROM Bookmark")
     fun getAllVM(): Flow<List<Bookmark>>

@@ -1,18 +1,25 @@
 package com.ryuxing.bubblebrowser
 
+import android.app.Dialog
 import android.content.Intent
 import android.service.quicksettings.TileService
 
 class MyTileService :TileService(){
     override fun onClick() {
         super.onClick()
+        var url =App.pref.getString("defaultUri",App.googleUrl)
+        if(url.isNullOrBlank())url = App.googleUrl
         val notification = BubbleNotification(this)
         notification.sendNotification(
-            "https://google.com",
+            url,
             Math.random().toString(),
             withExpand = true
         )
-        startActivityAndCollapse(Intent(this,BrowserActivity::class.java).also { it.flags = Intent.FLAG_ACTIVITY_NEW_TASK })
+        showDialog(Dialog(this).also {
+            it.setOnShowListener {
+                it.cancel()
+            }
+        })
     }
 
 }

@@ -7,6 +7,8 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -49,6 +51,10 @@ class MainActivity : AppCompatActivity() {
         }
         notification.makeNotificationChannel()
         setContentView(R.layout.activity_main)
+        var url = App.pref.getString("defaultUri",App.googleUrl)
+        if(url.isNullOrBlank())url = App.googleUrl
+        findViewById<EditText>(R.id.main_url_edit_text).setText(url)
+
         findViewById<Button>(R.id.main_go_button).setOnClickListener(clickListener)
         val rv = findViewById<RecyclerView>(R.id.bookmark_recycler)
         editDialog.mainActivity =this
@@ -93,4 +99,18 @@ class MainActivity : AppCompatActivity() {
         else notification.sendNotification(url,id,false, withExpand = true)
     }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_main_activity,menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return  when(item.itemId){
+            R.id.menu_settings ->{
+                startActivity(Intent(this,SettingsActivity::class.java))
+                return true
+            }
+            else ->super.onOptionsItemSelected(item)
+        }
+    }
 }

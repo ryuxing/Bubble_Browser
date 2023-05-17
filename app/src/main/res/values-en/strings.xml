@@ -41,5 +41,24 @@
     <string name="toast_edit_save">The Bookmark Saved.</string>
     <string name="toast_edit_delete">The Bookmark deleted.</string>
     <string name="dialog_confirm_delete_message">Are you sure you want to delete \"%1$s\" ?</string>
+    <string name="menu_settings">Settings</string>
+    <string name="settings_category_customize">Personalization</string>
+    <string name="settings_title_url">Default URL</string>
+    <string name="settings_title_reset">Reset Settings</string>
+    <string name="settings_title_reset_notification_channel">Reset Notification Settings</string>
+    <string name="settings_summary_reset_notification">Reset notification settings It will change the default settings with ringtones, vibrations etc.</string>
+    <string name="settings_title_clear_bookmarks">Clear All Bookmarks</string>
+    <string name="settings_summary_clear_bookmarks">Clear all saved bookmarks.</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="toast_deletebookmarks_notificatios">All bookmarks were removed.</string>
+    <string name="toast_settings_reset_notificatios">A notification channel was reset.</string>
+    <string name="dialog_delete_bookmarks_message">Are you sure to want to delete All Bookmarks?</string>
+    <string name="settings_summary_default_url">The default page of Main Activity and Quick Panel Settings. If the value is not set, it will launch Google.</string>
+    <string name="settings_summary_add_quick_setting">Add Quick Setting Tile to your panel.</string>
+    <string name="settings_title_add_quick_setting">Add to Quick Setting Panel</string>
+    <string name="toast_version_to_add_tile">Only Android 13+ devices can use. \nAdd Tile By Yourself</string>
+    <string name="toast_tile_added_or_fail">Requested. If pop up does not appear,  the Tile may already added to quick setting panel.</string>
+    <string name="settings_title_version">Version</string>
+    <string name="settings_category_about_app">About this App</string>
 
 </resources>

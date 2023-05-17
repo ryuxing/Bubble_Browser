@@ -7,6 +7,7 @@ class BookmarkRepository(val dao: BookmarkDao) {
     suspend fun add(bookmark :Bookmark) = dao.add(bookmark)
     suspend fun update(bookmark: Bookmark) = dao.update(bookmark)
     suspend fun delete(bookmark: Bookmark) = dao.delete(bookmark)
+    suspend fun deleteAll() = dao.deleteAll()
 
 
 }

@@ -27,4 +27,9 @@ class BookmarkViewModel(private val repository :BookmarkRepository) :ViewModel()
             repository.delete(bookmark)
         }
     }
+    fun deleteAll() {
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.deleteAll()
+        }
+    }
 }

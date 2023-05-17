@@ -7,6 +7,7 @@ import android.app.PendingIntent
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
+import android.media.AudioAttributes
 import android.util.Log
 import androidx.core.app.NotificationCompat
 import androidx.core.content.pm.ShortcutInfoCompat
@@ -21,13 +22,26 @@ class BubbleNotification(parentContext :Context){
         context = parentContext
         notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
     }
+    fun makeNewNotificationChannel(){
+        notificationManager.deleteNotificationChannel(App.pref.getString("notificationChannelId","Notification_Bubble"))
+        App.pref.edit().also { ed ->
+            ed.putString("notificationChannelId","Notification_Bubble_"+Math.random())
+        }
+        makeNotificationChannel()
+    }
     fun makeNotificationChannel(){
         notificationManager.createNotificationChannel(
-            NotificationChannel("Notification_Bubble",context.getText(R.string.notification_channel_bubble),
-                NotificationManager.IMPORTANCE_DEFAULT).also{it.setAllowBubbles(true)})
+            NotificationChannel(
+                "Notification_Bubble",
+                context.getText(R.string.notification_channel_bubble),
+                NotificationManager.IMPORTANCE_DEFAULT).also{
+                    it.setAllowBubbles(true)
+                    it.vibrationPattern = longArrayOf(0,20)
+                    it.setSound(null,null)
+                })
 
     }
-    fun sendNotification(url:String,shortcut:String,isUpdate:Boolean=false,favicon: IconCompat? =null,withExpand:Boolean=false,title:String ="Ongoing Browser"){
+    fun sendNotification(url:String,shortcut:String,isUpdate:Boolean=false,favicon: IconCompat? =null,withExpand:Boolean=false,title:String ="New Browser"){
         Log.v("url", url)
         val pendingIntent = PendingIntent
             .getActivity(
@@ -49,10 +63,10 @@ class BubbleNotification(parentContext :Context){
         //Update Shortcuts
         pushShortcut(shortcut,icon,title)
 
-        val builder = NotificationCompat.Builder(context,"Notification_Bubble")
+        val builder = NotificationCompat.Builder(context,App.pref.getString("notificationChannelId","Notification_Bubble")?:"Notification_Bubble")
             .setCategory(Notification.CATEGORY_MESSAGE)
             .setStyle(NotificationCompat.MessagingStyle(App.person).also{ messaging ->
-                messaging.addMessage("New Browser", Date().time,App.person)
+                messaging.addMessage(title, Date().time,App.person)
             })
             .setAutoCancel(true)
             .setShortcutId(shortcut)

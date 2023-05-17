@@ -42,4 +42,23 @@
     <string name="toast_edit_save">ブックマークを保存しました。</string>
     <string name="toast_edit_delete">ブックマークを削除しました。</string>
     <string name="dialog_confirm_delete_message">本当に\"%1$s\"を削除しますか？</string>
+    <string name="settings_category_customize">個人設定</string>
+    <string name="settings_title_url">デフォルトのURL</string>
+    <string name="menu_settings">設定</string>
+    <string name="settings_title_reset">設定のリセット</string>
+    <string name="settings_title_reset_notification_channel">通知設定のリセット</string>
+    <string name="settings_title_clear_bookmarks">ブックマークの全消去</string>
+    <string name="settings_summary_reset_notification">通知の設定をリセットします。通知音・バイブの設定等が初期状態に戻ります。</string>
+    <string name="settings_summary_clear_bookmarks">すべてのブックマークを削除します。</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="toast_settings_reset_notificatios">通知チャンネルが再設定されました。</string>
+    <string name="toast_deletebookmarks_notificatios">すべてのブックマークが削されました。</string>
+    <string name="dialog_delete_bookmarks_message">本当にすべてのブックマークを消去しますか？</string>
+    <string name="settings_summary_default_url">最初のURLとクイック設定パネルから開く際のURLです。未設定の場合、Googleが表示されます。</string>
+    <string name="settings_title_add_quick_setting">クイック設定パネルに追加</string>
+    <string name="settings_summary_add_quick_setting">クイック設定パネルにタイルを追加します。</string>
+    <string name="toast_tile_added_or_fail">ポップアップが出ない場合、既にタイルがクイック設定パネルに追加されているかもしれません。</string>
+    <string name="toast_version_to_add_tile">Android13以上できる機能です。\\n手動でタイルを追加してください。</string>
+    <string name="settings_title_version">バージョン</string>
+    <string name="settings_category_about_app">このアプリについて</string>
 </resources>

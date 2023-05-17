@@ -23,10 +23,8 @@ abstract class BookmarkDB :RoomDatabase(){
                 .allowMainThreadQueries()
                 .build()
         }
-
         fun getAll():List<Bookmark> = db().dao().getAll()
         fun getOne(id:Int):List<Bookmark> = db().dao().get(id)
-
 
     }
     abstract fun dao():BookmarkDao
