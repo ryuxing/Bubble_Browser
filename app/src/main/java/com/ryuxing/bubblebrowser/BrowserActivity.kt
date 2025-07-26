@@ -3,6 +3,7 @@ package com.ryuxing.bubblebrowser
 import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.content.pm.PackageManager.*
 import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Build
@@ -190,7 +191,12 @@ class BrowserActivity : AppCompatActivity() {
                 true
             }
             R.id.menu_item_open_with ->{
-                startActivity(Intent(Intent.ACTION_VIEW,Uri.parse(webView.url)))
+                val intent = Intent(Intent.ACTION_VIEW,Uri.parse(webView.url))
+                val openPackageName = getPackageOpenWith()
+                if(openPackageName !="") {
+                    intent.`package` = openPackageName
+                }
+                startActivity(intent)
                 true
             }
             R.id.menu_item_add_bookmark ->{
@@ -236,7 +242,47 @@ class BrowserActivity : AppCompatActivity() {
             }
         }
     }
+    fun getPackageOpenWith() : String{
+        //パッケージ詳細取得
+        val packageManager = packageManager
+        val intent = Intent(Intent.ACTION_VIEW,Uri.parse("http://example.com"))
+        val resolveInfos = packageManager.queryIntentActivities(intent, MATCH_ALL)
+        Log.d("resolveInfos","" + resolveInfos.size )
+        var defaultPackage = packageManager.queryIntentActivities(intent, MATCH_DEFAULT_ONLY).first().activityInfo.packageName.toString()
+        var selectedPackage = App.pref.getString("select_default_opener","default").toString()
+        var returnPackage = selectedPackage
+        var isChromeExists = false
+        var isPackageExist = false
+        for (resolveInfo in resolveInfos) {
+            if(selectedPackage == resolveInfo.activityInfo.packageName.toString()){
+                isPackageExist =true
+            }
+            if(selectedPackage == "com.android.chrome"){
+                isChromeExists = true
+            }
+        }
+        //条件分岐
 
+        if(!isPackageExist){
+            selectedPackage = "default"
+        }
+        if(selectedPackage == "default"){
+            returnPackage = ""
+            if(defaultPackage == App.context.packageName.toString()){
+                if(isChromeExists){
+                    returnPackage = "com.android.chrome"
+                }else {
+                    for (resolveInfo in resolveInfos) {
+                        if (selectedPackage != resolveInfo.activityInfo.packageName.toString()) {
+                            returnPackage = resolveInfo.activityInfo.packageName.toString()
+                            break
+                        }
+                    }
+                }
+            }
+        }
+        return returnPackage
+    }
     override fun onBackPressed() {
         if(webView.canGoBack())webView.goBack()
         else{

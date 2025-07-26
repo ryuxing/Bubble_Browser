@@ -51,8 +51,8 @@
     <string name="settings_summary_reset_notification">通知の設定をリセットします。通知音・バイブの設定等が初期状態に戻ります。</string>
     <string name="settings_summary_clear_bookmarks">すべてのブックマークを削除します。</string>
     <string name="title_activity_settings">SettingsActivity</string>
-    <string name="toast_settings_reset_notificatios">通知チャンネルが再設定されました。</string>
-    <string name="toast_deletebookmarks_notificatios">すべてのブックマークが削されました。</string>
+    <string name="toast_settings_reset_notifications">通知チャンネルが再設定されました。</string>
+    <string name="toast_delete_bookmarks_notifications">すべてのブックマークが削されました。</string>
     <string name="dialog_delete_bookmarks_message">本当にすべてのブックマークを消去しますか？</string>
     <string name="settings_summary_default_url">最初のURLとクイック設定パネルから開く際のURLです。未設定の場合、Googleが表示されます。</string>
     <string name="settings_title_add_quick_setting">クイック設定パネルに追加</string>
@@ -61,4 +61,17 @@
     <string name="toast_version_to_add_tile">Android13以上できる機能です。\\n手動でタイルを追加してください。</string>
     <string name="settings_title_version">バージョン</string>
     <string name="settings_category_about_app">このアプリについて</string>
+    <string name="settings_category_default_browser">デフォルトブラウザ</string>
+    <string name="settings_title_enable_as_default_browser">デフォルトブラウザとして設定する</string>
+    <string name="settings_summary_enable_as_default_browser">このアプリをデフォルトブラウザに変更することができます。</string>
+    <string name="settings_item_entries_default">既定値</string>
+    <string name="settings_title_select_default_opener">"ブラウザで開く"で使うアプリ</string>
+    <string name="notification_channel_update">アップデートによる重要な新しい機能を通知します。.</string>
+    <string name="app_update_title">Bubble Browserの新しい機能をチェック</string>
+    <string name="app_update_text">今回のアップデートで、Bubble Browserを既定のブラウザとして設定できるようになりました！</string>
+    <string name="settings_summary_help">ヘルプページを開きます。</string>
+    <string name="settings_title_help">ヘルプ</string>
+    <string name="settings_dialog_default_browser_title">注意事項</string>
+    <string name="settings_dialog_default_browser_message">BubbleBrowserはブラウザ機能の一部しか実装されていません。 \n\n トラブルが発生した際には別のブラウザもお使いください。\n\n次の画面でBubble Browserを選んだ後、1つ下の設定項目から\"ブラウザで開く\"で使用するアプリを選択できます。</string>
+    <string name="button_ok">OK</string>
 </resources>

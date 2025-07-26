@@ -48,9 +48,7 @@ class InitialActivity : AppCompatActivity() {
             permissionRequest.launch(Manifest.permission.POST_NOTIFICATIONS)
         }else{
             notification.makeNotificationChannel()
-            startActivity(Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS).apply {
-                putExtra(Settings.EXTRA_APP_PACKAGE, packageName)
-            })
+            startActivity(Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS))
             Toast.makeText(this, R.string.toast_turn_on_notification, Toast.LENGTH_LONG).show()
         }
     }

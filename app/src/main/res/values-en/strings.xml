@@ -50,8 +50,8 @@
     <string name="settings_title_clear_bookmarks">Clear All Bookmarks</string>
     <string name="settings_summary_clear_bookmarks">Clear all saved bookmarks.</string>
     <string name="title_activity_settings">SettingsActivity</string>
-    <string name="toast_deletebookmarks_notificatios">All bookmarks were removed.</string>
-    <string name="toast_settings_reset_notificatios">A notification channel was reset.</string>
+    <string name="toast_delete_bookmarks_notifications">All bookmarks were removed.</string>
+    <string name="toast_settings_reset_notifications">A notification channel was reset.</string>
     <string name="dialog_delete_bookmarks_message">Are you sure to want to delete All Bookmarks?</string>
     <string name="settings_summary_default_url">The default page of Main Activity and Quick Panel Settings. If the value is not set, it will launch Google.</string>
     <string name="settings_summary_add_quick_setting">Add Quick Setting Tile to your panel.</string>
@@ -60,5 +60,18 @@
     <string name="toast_tile_added_or_fail">Requested. If pop up does not appear,  the Tile may already added to quick setting panel.</string>
     <string name="settings_title_version">Version</string>
     <string name="settings_category_about_app">About this App</string>
+    <string name="settings_category_default_browser">Default Browser</string>
+    <string name="settings_summary_enable_as_default_browser">Tap here to change this app to  the default browser app.</string>
+    <string name="settings_title_enable_as_default_browser">Set As Default Browser</string>
+    <string name="settings_title_select_default_opener">Open in ...</string>
+    <string name="settings_item_entries_default">"Default "</string>
+    <string name="notification_channel_update">Notify Update Features.</string>
+    <string name="app_update_title">New Features on Bubble Browser</string>
+    <string name="app_update_text">Now, you can select as default browser!</string>
+    <string name="settings_summary_help">Go to the help site.</string>
+    <string name="settings_title_help">Help</string>
+    <string name="settings_dialog_default_browser_title">Important Note</string>
+    <string name="settings_dialog_default_browser_message">This app is NOT fully supported browser features. \nPlease use with other browse when something went wrong. \n\nAfter choose default browser, You can choose app for additional browser to \"Open with\" in below entry.</string>
+    <string name="button_ok">OK</string>
 
 </resources>

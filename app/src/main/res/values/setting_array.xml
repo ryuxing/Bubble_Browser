@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="settings_open_in_entries">
+        <item>@string/settings_item_entries_default</item>
+    </string-array>
+    <string-array name="settings_open_in_values">
+        <item>Default</item>
+    </string-array>
+</resources>

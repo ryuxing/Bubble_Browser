@@ -31,7 +31,25 @@
 
 
     </PreferenceCategory>
+    <PreferenceCategory android:title="@string/settings_category_default_browser">
+        <Preference
+            app:key="enable_as_default_browser"
+            app:summary="@string/settings_summary_enable_as_default_browser"
+            app:title="@string/settings_title_enable_as_default_browser"/>
+        <ListPreference
+            app:key="select_default_opener"
+            app:title="@string/settings_title_select_default_opener"
+            app:summary="@string/settings_summary_enable_as_default_browser"
+            app:useSimpleSummaryProvider="true"
+            app:entries="@array/settings_open_in_entries"
+            app:entryValues="@array/settings_open_in_values"
+            />
+    </PreferenceCategory>
     <PreferenceCategory android:title="@string/settings_category_about_app">
+        <Preference
+            app:key="help"
+            app:summary="@string/settings_summary_help"
+            app:title="@string/settings_title_help" />
         <Preference
             app:key="version"
             app:summary="@string/settings_summary_clear_bookmarks"
