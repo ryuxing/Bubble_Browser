@@ -10,14 +10,16 @@ android {
     defaultConfig {
         applicationId "com.ryuxing.bubblebrowser"
         minSdk 30
-        targetSdk 33
-        versionCode 14
+        targetSdk 34
+        versionCode 15
         versionName "1.4.0 "
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     packagingOptions {
-        exclude 'META-INF/atomicfu.kotlin_module'
+        resources {
+            excludes += ['META-INF/atomicfu.kotlin_module']
+        }
     }
     buildTypes {
         release {
